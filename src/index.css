@@ -1,0 +1,606 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: black;
+  overflow: hidden;
+}
+
+    .App {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+    }
+
+        .SideBar {
+          margin: 0px 10px;
+          display: flex;
+          flex-direction: column;
+          width: 250px;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+        }
+
+            .LogoSection {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              flex: 0.15;
+              margin-top: 4px;
+            }
+
+                .Logo {
+                  padding-top: 20px;
+                  padding-left: 4px;
+                }
+
+            .MenuSelection {
+              padding-top: 10px;
+              gap: 8px;
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 100%;
+              flex: 1.45;
+            }
+
+                .MenuItem {
+                  border-radius: 12px;
+                  padding: 16px 10px;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                }
+
+                .MenuItem:hover {
+                  background-color: #232324;
+                }
+
+                .MenuItemLogo {
+                  width: 24px;
+                  height: 24px;
+                  margin-right: 10px;
+                }
+
+                .MenuItemPfp {
+                  width: 24px;
+                  height: 24px;
+                  margin-right: 10px;
+                  border-radius: 50%;
+                }
+
+                .MenuItemText {
+                  color: white;
+                  font-family: 'Helvetica Neue', Arial, sans-serif;
+                  font-size: 16px;
+                  font-weight: 500;
+                }
+
+            .MoreOptions {
+              gap: 8px;
+              display: flex;
+              flex-direction: column;
+              flex: 0.7;
+            }    
+        .MainContent {
+          display: flex;
+          flex: 1;
+          border-left: 1.5px solid #232324;
+          flex-direction: row;
+          margin-left: 270px;
+        }
+
+            .Feed {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              height: 100vh;
+              overflow-y: auto;
+            }
+
+                .StorySection {
+                  display: flex;
+                  flex-direction: row;
+                  flex: 0.15;
+                  row-gap: 10px;
+                  padding-left: 8px;
+                  padding-right: 8px;
+                }
+
+                    .Story {
+                      display: flex;
+                      flex-direction: column;
+                      row-gap: 6px;
+                      margin-top: 24px;
+                      width: 104px;
+                      max-height: 116px;
+                      align-items: center;
+                      cursor: pointer;
+                    }
+
+                        .StoryPfp {
+                          width: 64px;
+                          height: 64px;
+                          border-radius: 50%;
+                          padding: 2px;
+                          background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+                        }
+                        .StoryPfp:hover {
+                          transform: scale(1.1);
+                          transition: transform 0.2s;
+                        }
+
+                        .StoryUserName {
+                          color: white;
+                          font-family: 'Helvetica Neue', Arial, sans-serif;
+                          font-size: 14px;
+                          font-weight: 500;
+                          text-align: center;
+                        }
+
+                .FeedSection {
+                  display: flex;
+                  flex-direction: column;
+                }
+
+                .Post {
+                  border-radius: 12px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: stretch;
+                  margin: 12px auto;
+                  width: 520px;
+                }
+
+                    .TopDetails {
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      justify-content: space-between;
+                      padding: 10px 0px;
+                    }
+
+                        .PostPfpImage {
+                          width: 32px;
+                          height: 32px;
+                          border-radius: 50%;
+                        }
+                        .PostDetails {
+                          display: flex;
+                          flex-direction: column;
+                          color: white;
+                          flex: 1;
+                          margin-left: 12px;
+                        }
+                        .PostUserName {
+                          font-weight: 600;
+                          font-size: 14px;
+                        }
+                        .PostTime {
+                          color: #A1A1A1;
+                          font-size: 12px;
+                          margin-top: 2px;
+                        }
+                        .PostOptionsLogo {
+                          width: 20px;
+                          height: 20px;
+                          opacity: 0.8;
+                        }
+
+                    .PostImage {
+                      width: 100%;
+                      background: #000;
+                    }
+                        .PostImageContent {
+                          width: 100%;
+                          height: auto;
+                          object-fit: cover;
+                        }
+
+                    .PostActions {
+                      display: flex;
+                      flex-direction: column;
+                      padding-top: 8px;
+                      padding-bottom: 4px;
+                      gap: 8px;
+                    }
+                        .PostActionIcons {
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-between;
+                        }
+                        .PostActionIcon {
+                          width: 24px;
+                          height: 24px;
+                          margin-right: 8px;
+                          cursor: pointer;
+                        }
+                        .PostActionCount {
+                          display: flex;
+                          flex-direction: row;
+                          gap: 12px;
+                          color: white;
+                          font-size: 14px;
+                        }
+                        .PostViewAllComments {
+                          color: #9aa6b2;
+                          font-size: 14px;
+                          cursor: pointer;
+                          width: fit-content;
+                        }
+                        .PostActionBar {
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-between;
+                        }
+                        .PostActionLeft { display: flex; align-items: center; gap: 10px; }
+                        .PostActionRight { display: flex; align-items: center; }
+
+                    .PostCaption {
+                      padding: 0px 12px 0px 0px;
+                    }
+                        .PostCaptionText {
+                          display: flex;
+                          flex-direction: row;
+                          gap: 8px;
+                          color: white;
+                        }
+                        .PostCaptionUserName {
+                          font-weight: 600;
+                        }
+                        .PostCaptionContent {
+                          color: #E1E1E1;
+                        }
+
+                    .PostCommentSection {
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      padding-bottom: 12px;
+                      border-bottom: 1px solid #232324;
+                      gap: 8px;
+                    }
+                        .PostCommentInput {
+                          flex: 1;
+                          background: transparent;
+                          border: none;
+                          color: white;
+                          outline: none;
+                          font-size: 14px;
+                        }
+                        .PostCommentInput::placeholder {
+                          color: #9aa6b2;
+                          font-size: 14px;
+                          font-family: 'Helvetica Neue', Arial, sans-serif;
+                          font-weight: 400;
+                        }
+                        .PostCommentEmoji {
+                          width: 12px;
+                          height: 12px;
+                          cursor: pointer;
+                        }
+                        .PostCommentSubmit {
+                          cursor: pointer;
+                          font-size: 14px;
+                          margin-right: 0px;
+                          color: white;
+                          background-color: #1f1f1f; 
+                          border: 1px solid #2a2a2a; 
+                          border-radius: 8px; 
+                          padding: 4px 12px;
+                          margin-left: 8px;
+                        }
+
+        .AddPostButton {
+          position: fixed;
+          right: 24px;
+          bottom: 24px;
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: #1f1f1f;
+          border: 1px solid #2a2a2a;
+          box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 1000;
+        }
+        
+        .AddPostButton:hover { 
+          filter: brightness(1.1); 
+        }
+        
+        .AddPostButtonLogo { 
+          width: 24px; 
+          height: 24px; 
+        }
+
+        .AddStoryButton {
+          position: fixed;
+          right: 24px;
+          bottom: 92px;
+          height: 36px;
+          padding: 0 12px;
+          border-radius: 999px;
+          background: #1f1f1f;
+          border: 1px solid #2a2a2a;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 1000;
+        }
+        .AddStoryButtonText { font-size: 14px; }
+
+        .CreatePostOverlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1100;
+        }
+        .CreatePostModal {
+          width: 520px;
+          background: #121212;
+          border: 1px solid #232324;
+          border-radius: 16px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+
+        /* Story viewer */
+        .StoryViewerModal {
+          width: min(92vw, 820px);
+          height: min(88vh, 720px);
+          background: #000;
+          border: 1px solid #232324;
+          border-radius: 16px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .StoryViewerHeader {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 12px;
+          color: white;
+          border-bottom: 1px solid #232324;
+        }
+        
+        .StoryViewerPfp { 
+          width: 28px; 
+          height: 28px; 
+          border-radius: 50%; 
+        }
+        
+        .StoryViewerUserName { 
+          font-weight: 600; 
+        }
+        
+        .StoryViewerClose { 
+          margin-left: auto; 
+          cursor: pointer; 
+          font-size: 20px; 
+        }
+        
+        .StoryViewerBody {
+          position: relative;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #000;
+          overflow: hidden;
+        }
+        
+        .StoryViewerImageBox {
+          width: min(90%, 420px);
+          aspect-ratio: 9 / 16;
+          background: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .StoryViewerImage { 
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover; 
+        }
+        
+        .StoryArrowBtn {
+          position: absolute;
+          top: 50%;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: rgba(0,0,0,0.45);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border: 1px solid rgba(255,255,255,0.2);
+        }
+        .StoryArrowBtnLeft { 
+          transform: rotate(90deg);
+          left: calc(50% - 290px);
+        }
+
+        .StoryArrowBtnRight { 
+          transform: rotate(90deg);
+          right: calc(50% - 290px);
+        }
+
+        .StoryArrowIcon { 
+          width: 20px; 
+          height: 20px; 
+          filter: invert(1); 
+          opacity: 0.95; 
+        }
+
+        .StoryArrowIconLeft { 
+          transform: rotate(180deg); 
+        }
+
+
+        /* Comments modal */
+        .CommentsModal {
+          width: min(90vw, 520px);
+          height: min(80vh, 600px);
+          background: #121212;
+          border: 1px solid #232324;
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        .CommentsHeader { color: white; 
+          padding: 12px; 
+          border-bottom: 1px solid #232324; 
+          display: flex; 
+          justify-content: 
+          space-between; 
+          align-items: center; 
+        }
+        
+        .CommentsClose {
+          cursor: pointer; 
+        }
+
+        .CommentsBody { 
+          flex: 1; 
+          overflow: auto; 
+          padding: 12px 0px; 
+          display: flex; 
+          flex-direction: column; 
+          gap: 10px; 
+        }
+
+        .CommentsItem {
+          display: flex; 
+          gap: 8px; 
+          color: #e1e1e1; 
+          align-items: center; 
+          padding: 0px 12px;
+          padding-top: 4px;
+          padding-bottom:  14px;
+          border-bottom: 0.5px solid #232324;
+        }
+
+        .CommentsPfp { 
+          width: 24px; 
+          height: 24px; 
+          border-radius: 50%; 
+        }
+
+        .CommentsUserName { 
+          color: white; 
+          font-weight: 600; 
+        }
+
+        .CommentsInputRow { 
+          border-top: 1px solid #232324; 
+          display: flex; 
+          align-items: center; 
+          padding: 10px; 
+          gap: 10px; 
+        }
+
+        .CommentsInput { 
+          flex: 1; 
+          background: transparent; 
+          border: none; 
+          color: white; 
+          outline: none; 
+        }
+
+        .CommentsSubmit { 
+          background: #0064e0; 
+          color: white; 
+          border: 1px solid #0b65c6; 
+          border-radius: 8px; 
+          padding: 8px 12px; 
+          cursor: pointer; 
+        }
+
+        .CreatePostHeader {
+          color: white;
+          padding: 14px 16px;
+          border-bottom: 1px solid #232324;
+          font-weight: 600;
+          text-align: center;
+        }
+        .CreatePostBody {
+          padding: 14px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          height: 100%;
+        }
+        .CreatePostPreview {
+          max-width: 540px;
+          max-height: 675px;
+          flex: 1;
+          background: #0d0d0d;
+          aspect-ratio: 4/5;
+          border: 1px solid #2a2a2a;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          object-fit: cover;
+          overflow: hidden;
+          position: relative;
+        }
+        .CreatePostPreviewImage {
+          max-width: 540px;
+          max-height: 675px;
+          border-radius: 8px;
+          object-fit: fill;
+        }
+        .CreatePostPlaceholder { 
+          color: #9a9a9a; 
+        }
+
+        .CreatePostFileInput { 
+          color: white; 
+        }
+
+        .CreatePostUserNameInput,.CreatePostCaptionInput {
+          background: #1a1a1a;
+          color: white;
+          border: 1px solid #2a2a2a;
+          border-radius: 8px;
+          padding: 10px 12px;
+          outline: none;
+        }
+        .CreatePostActions {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: flex-end;
+        }
+        .CreatePostCancelButton,.CreatePostAddButton {
+          background: #1f1f1f;
+          color: white;
+          border: 1px solid #2a2a2a;
+          border-radius: 8px;
+          padding: 10px 14px;
+          cursor: pointer;
+        }
+        .CreatePostAddButton { background: #0064e0; border-color: #0b65c6; }
