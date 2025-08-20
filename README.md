@@ -137,8 +137,7 @@ Open [http://localhost:5173](http://localhost:5173/) in your browser to see the 
 ## 👨‍💻 Author
 
 **Soham Bhavesh Prajapati**
-- [LinkedIn](https://www.linkedin.com/in/soham-prajapati-9-in)
-- [GitHub](https://github.com/SohamPrajapati9)
+[LinkedIn](https://www.linkedin.com/in/soham-prajapati-9-in) | [GitHub](https://github.com/SohamPrajapati9)
 
 ---
 
