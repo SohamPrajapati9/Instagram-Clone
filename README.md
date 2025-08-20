@@ -108,12 +108,6 @@ Open [http://localhost:5173](http://localhost:5173/) in your browser to see the 
 
 ---
 
-## 📸 Demo Preview
-
-*(Insert screenshots or a short GIF of the working UI here for a quick preview.)*
-
----
-
 ## 🔮 Future Improvements
 
 - Add authentication with a login/sign-up flow
