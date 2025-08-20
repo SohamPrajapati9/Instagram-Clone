@@ -30,6 +30,7 @@ This project replicates Instagram’s core features such as posts, likes, commen
 
 ## 📂 Project Structure  
 
+```
 📦 INSTA_CLONE
 ┣ 📂 src
 ┃ ┣ 📂 assets
@@ -73,8 +74,7 @@ This project replicates Instagram’s core features such as posts, likes, commen
 ┣ package-lock.json
 ┣ package.json
 ┗ README.md
-
-
+```
 ---
 
 ## 🚀 Getting Started
